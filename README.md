@@ -29,3 +29,44 @@ Makers Challenge #04 - takeaway
 
 
 > Good luck!
+
+CRC Cards
+---------
+
+TAKEAWAY
+it should:
+- be able to return a list of dish names and prices
+- be able to return the price of a dish by its name
+- be able to add a quantity of a dish to the order
+
+it interacts with:
+- Order
+- Dish
+- LineItem
+
+ORDER
+it should:
+- have a list of LineItems
+- be able to accept a LineItem
+- be able to calculate a grand-total
+
+it interacts with:
+- Order
+- Dish
+- LineItem
+
+DISH
+it should:
+- have a name
+- have a price
+
+it only gets interacted with
+
+LINEITEM
+it should:
+- be able to accept a dish
+- be able to accept a quantity
+- be able to calculate a total
+
+it interacts with:
+- 
