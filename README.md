@@ -33,6 +33,7 @@ Makers Challenge #04 - takeaway
 CRC Cards
 ---------
 
+~~
 TAKEAWAY
 it should:
 - be able to return a list of dish names and prices
@@ -43,6 +44,7 @@ it interacts with:
 - Order
 - Dish
 - LineItem
+~~
 
 ORDER
 it should:
