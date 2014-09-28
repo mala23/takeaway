@@ -69,4 +69,4 @@ it should:
 - be able to calculate a total
 
 it interacts with:
-- 
+- Dish
