@@ -6,4 +6,8 @@ class Order
 		@line_items = []
 	end
 
+	def add_line_item(line_item)
+		@line_items << line_item
+	end
+
 end
