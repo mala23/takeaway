@@ -70,3 +70,10 @@ it should:
 
 it interacts with:
 - Dish
+
+MENU
+it should:
+- have an array of dishes
+- be able to add new dishes
+
+it only gets interacted with
