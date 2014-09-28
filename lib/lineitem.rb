@@ -10,9 +10,9 @@ class LineItem
 		"this line item contains #{@quantity} #{@dish}"
 	end
 
-	# def cost
-	# 	dish.price * quantity
-	# end
+	def total
+		dish.price * quantity
+	end
 
 end
 
