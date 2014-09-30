@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'twilio'
+gem 'twilio-ruby'

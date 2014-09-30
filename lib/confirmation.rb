@@ -1,33 +1,23 @@
-require 'rubygems'
 require 'twilio-ruby' 
 
 class Confirmation
 
-	attr_reader :account_sid
-	attr_reader :auth_token
-	attr_reader :client
-	attr_reader :from
-	 
 	def initialize
-		@account_sid = 'AC716374c94644e2e3ad58d64f402c6e94' 
-		@auth_token = '2c80700d6bf8e44c60fe307ab152aff5' 
-		@from = '+441202562987'
+		account_sid = 'AC716374c94644e2e3ad58d64f402c6e94' 
+		auth_token = '2c80700d6bf8e44c60fe307ab152aff5' 
 		@client = Twilio::REST::Client.new account_sid, auth_token 
-	end
+	 
+		@client.account.messages.create({
+			:from => '+441202562987', 
+			:to => '+447463250080', 
+			:body => 'Thank you! Your order was placed successfully and will be delivered before #{strTime}',  
+		})
 
-	def message(to, body)
-		@client.messages.create(
-			:from => @from, 
-			:to => to, 
-			:body => body,  
-		)
+		def new_body
+			t = Time.now + 3600 # 1 hour in the future (unit is seconds)
+		 	t.strftime('%k:%M')
+		end
 	end
-
-	def new_body
-		t = Time.now + 1*60*60 # 1 hour in the future (unit is seconds)
-	 	t.strftime("Thank you! Your order was placed successfully and will be delivered before %k:%M")
-	end
-
 end
 
 # it 'confirm the delivery time of one hour from now' do
